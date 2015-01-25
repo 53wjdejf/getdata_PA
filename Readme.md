@@ -4,6 +4,13 @@
 
 I downloaded data in my working directory manually, and read the data 
 ```{r}
+#Set the URL
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+
+#Download and unzip the file
+download.file(fileUrl, destfile = "UCI HAR Dataset.zip")
+unzip("UCI HAR Dataset.zip")
+
 features <- read.table("./UCI HAR Dataset/features.txt")
 activity <- read.table("./UCI HAR Dataset/activity_labels.txt")
 
